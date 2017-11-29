@@ -1,0 +1,45 @@
+{
+   "sap.app": {
+     "dataSources" : {
+         	"productOData" : {
+         	  "uri": "proxy/http/122.180.87.238:8000/sap/opu/odata/SAP/ZGW_BATCH25_PRODUCT_SRV"
+         	}
+      }
+   
+   },
+   "sap.ui5" : {
+     	"rootView" : "smax.batch25.split.view.Split",
+     	"models" : {
+     	    "" : {
+     	        "dataSource" : "productOData"
+     	    }
+     	},
+     	"routing" : {
+     	   "config" : {
+     	         "routerClass" : "sap.m.routing.Router",
+     	         "viewType" : "XML",
+     	         "controlId" : "idSApp"
+     	   },
+     	 "routes" : [
+     	      {
+     	        "pattern" : "",
+     	        "name" : "home",
+     	        "target" : ["pList", "pDetail"]
+     	      
+     	      }
+     	 
+     	 ],
+     	 "targets" : {
+     	      "pList" : {
+     	            "viewName" : "smax.batch25.split.view.ProductList",
+     	            "controlAggregation" : "masterPages"
+     	      },
+     	      "pDetail" : {
+     	      	"viewName" : "smax.batch25.split.view.ProductDetails",
+     	      	"controlAggregation" : "detailPages"
+     	      }
+     	 }  
+     	
+     	}
+   }
+}
