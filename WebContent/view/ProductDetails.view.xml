@@ -4,8 +4,7 @@
 		 xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Product Details">
 		<content>
-			<ObjectHeader title="{ProductID}" 
-			binding="{/ProductSet('HT-1001')}"
+			<ObjectHeader title="{ProductID}" id="idobjHeader"
 		intro="{Name}" number="{Category}"/>
 		</content>
 	</Page>

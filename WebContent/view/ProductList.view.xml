@@ -4,7 +4,7 @@
 		 xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Title">
 		<content>
-	         <List items="{/ProductSet}">
+	         <List items="{/ProductSet}" id="idList">
 	           <items>
 		              <StandardListItem title="{ProductID}" 
 		              description="{Name}" type="Active"

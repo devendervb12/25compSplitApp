@@ -5,9 +5,16 @@ sap.ui.controller("smax.batch25.split.controller.ProductList", {
 * Can be used to modify the View before it is displayed, to bind event handlers and do other one-time initialization.
 * @memberOf view.ProductList
 */
-//	onInit: function() {
-//
-//	},
+	onInit: function() {
+    // get the event of list upload
+		var oList = this.getView().byId("idList");
+		
+		oList.attachUpdateFinished(function(){
+			debugger;
+			this.getView().byId("idList").getItems()[0].firePress();	
+		},this);
+		
+	},
 
 /**
 * Similar to onAfterRendering, but this hook is invoked before the controller's View is re-rendered
@@ -34,5 +41,23 @@ sap.ui.controller("smax.batch25.split.controller.ProductList", {
 //	onExit: function() {
 //
 //	}
+	
+	onItemPress : function(oEvent){
+	debugger;
+	// get the Title
+	var title = oEvent.getSource().getTitle();
+	// pass the data- title(ProductID) to detailView
+	this.getOwnerComponent().getRouter().navTo("detailName", {pid : title})
+	}
 
 });
+
+
+
+
+
+
+
+
+
+

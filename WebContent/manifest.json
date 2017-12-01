@@ -26,6 +26,11 @@
      	        "name" : "home",
      	        "target" : ["pList", "pDetail"]
      	      
+     	      },
+     	      {
+     	        "pattern" : "toDetail/{pid}",
+     	        "name" : "detailName",
+     	        "target" : ["pDetail"]
      	      }
      	 
      	 ],
