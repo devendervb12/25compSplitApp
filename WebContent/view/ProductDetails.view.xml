@@ -1,11 +1,19 @@
 <core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
-	controllerName="smax.batch25.split.controller.ProductDetails"	
-		
+	controllerName="smax.batch25.split.controller.ProductDetails"			
 		 xmlns:html="http://www.w3.org/1999/xhtml">
 	<Page title="Product Details">
 		<content>
 			<ObjectHeader title="{ProductID}" id="idobjHeader"
 		intro="{Name}" number="{Category}"/>
 		</content>
+		<footer>
+		  <Bar>
+		    <contentLeft>
+		      <Button text="Create" press="onCreate"/>
+		      <Button text="Update" press="onUpdate"/>
+		      <Button text="Delete" press="onRemove"/>
+		    </contentLeft>
+		  </Bar>
+		</footer>
 	</Page>
 </core:View>
